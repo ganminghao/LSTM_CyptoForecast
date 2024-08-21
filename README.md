@@ -2,8 +2,8 @@
 
 This is a naive attempt to predict Bitcoin returns (15-minute intervals) using an LSTM-based model. After losing half of my investment in the cryptocurrency market, I decided to try turning losses into profits by using a machine learning model. This is a completely new field for me (my experience so far has been limited to watching a few of Li Hongyi's YouTube videos). Thanks to the powerful Python libraries and ChatGPT, I managed to run the training code successfully. However, the model has proven ineffective in predicting returns.
 
-# Get data 
-By using API from OKX, I obtained basic BTC K-line features (Open, Close, High, Low) and trade volume in 15-minute intervals. I then generated SMA features, K-line-related features (Upper/Lower shadow, Range-to-change, Close-Open, High-Low, etc.), and 15-minute returns calculated recursively from closing prices. 
+# Get data / Feature selection
+By using API from OKX, I obtained basic BTC K-line features (Open, Close, High, Low) and trade volume in 15-minute intervals. I then generated SMA features, K-line-related features (Upper/Lower shadow, Range-to-change, Close-Open, High-Low, etc.), and 15-minute returns calculated recursively from closing prices. In the training section, i set 'return' as lable instead of prices.
 
 The data is written into a CSV file for further analysis.
 （see get_past_data.py)
@@ -35,8 +35,11 @@ Scenario 2: Past market data may not influence future trends: Fama (1970) establ
 
 在大一下半年， 我在 okx 痛失几百刀，于是这个暑假决定用机器学习模型来扭转亏损，妄想通过量化加密货币交易走上致富道路。感谢李宏毅教授的机器学习课程、感谢 ChatGPT、感谢强大的 python 库，最终写的代码能成功开始训练，但是训练出的模型在预测能力上不尽人意。
 
-# 数据获取
+# 数据获取/特征选择
 通过 OKX API，获取基本的 BTC K 线特征（开盘价、收盘价、最高价、最低价）和 15 分钟间隔的交易量。然后生成了 SMA 特征、与 K 线相关的特征（上/下影线、Range-to-change、收盘-开盘价差、高低价差等），以及通过递归计算 15 分钟回报。写入 CSV 文件以供进一步分析。
+
+预测回归率而不是具体价格。（我猜 return 更符合统计学规律 somehow，但其实最后两个都跑不出来）
+
 （参见 get_past_data.py）
 
 # 模型设计
