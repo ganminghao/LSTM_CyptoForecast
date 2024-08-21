@@ -21,7 +21,7 @@ LearingRateScheduler: OneCycleLR(max_lr=0.01)
 # Result
 FAIL!
 
-Best prediction accuracy: 52.4% (777 predictions) (Not within the 90% confidence interval)
+Best prediction accuracy: 52.4% (784 predictions) (Not within the 90% confidence interval)
 
 # Reflection
 Scenario 1: My model might be too simple and too easy to implement (otherwise, anyone who knows how to use Python packages could make a fortune). In the future, I may introduce more complex neural network structures or reconsider the feature selection based on financial theories.
@@ -55,9 +55,9 @@ LSTM layer + Attention layer + FC layer
 # 结果
 失败！
 
-最佳预测准确率：52.4%（789 次预测）（不在 90% 置信区间内）
+最佳预测准确率：52.4%（784 次预测）（不在 90% 置信区间内）
 
-# 反思
+# 随想
 
 情况 1： 我的模型可能太简单、门槛太低（不然随便一个会调用 python 库的人都能发财了）。以后可能会试试引入更复杂的神经网络结构，或者恶补金融学重新选择特征。
 
